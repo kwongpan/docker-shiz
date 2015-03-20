@@ -14,8 +14,8 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
 
-  config.vm.network "forwarded_port", guest: 27017, host: 27017
-  config.vm.network "forwarded_port", guest: 28017, host: 28017
+  #config.vm.network "forwarded_port", guest: 27017, host: 27017
+  #config.vm.network "forwarded_port", guest: 28017, host: 28017
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
