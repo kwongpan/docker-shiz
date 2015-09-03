@@ -10,6 +10,10 @@ RUN apt-get -y install ruby telnet wget
 
 VOLUME ["/var/log", "/tmp/logstash"]
 
-EXPOSE 9292
+ENV LOGSTASH_CONFIG /tmp/logstash/logstash.conf
 
-CMD /logstash/bin/logstash -f /tmp/logstash/logstash.conf web
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+EXPOSE 9292
